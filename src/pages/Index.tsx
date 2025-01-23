@@ -1,13 +1,43 @@
 import { CustomAlert } from "@/components/ui/custom-alert";
 import { Rating } from "@/components/ui/rating";
+import { ScrollTabs } from "@/components/ui/scroll-tabs";
+import { Package } from "lucide-react";
 
 export default function Index() {
   const message = "Hey you. Can you get me some pizza please? I am craving for a nice slice of pepperoni. Thank and will see you soon.";
+  
+  const tabItems = [
+    { label: "item with a very long label" },
+    { label: "item label", icon: <Package className="w-4 h-4" /> },
+    { label: "item label" },
+    { label: "item label" },
+    { label: "item label long" },
+    { label: "item label" },
+    { label: "item label" },
+    { label: "item label" },
+    { label: "item label" },
+    { label: "item label" },
+  ];
   
   return (
     <div className="p-8 space-y-12">
       {/* Component Showcase Section */}
       <div className="max-w-4xl mx-auto">
+        {/* Tabs Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6">Tabs</h2>
+          <div className="space-y-8">
+            <ScrollTabs items={tabItems} />
+            <ScrollTabs 
+              items={[
+                { label: "item label", icon: <Package className="w-4 h-4" /> },
+                { label: "item label", icon: <Package className="w-4 h-4" /> },
+                { label: "item label", icon: <Package className="w-4 h-4" /> },
+              ]} 
+            />
+          </div>
+        </section>
+
         {/* Alerts Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">Alerts</h2>

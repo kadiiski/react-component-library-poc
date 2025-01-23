@@ -14,7 +14,7 @@ interface RatingProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
   ({ topLabel = "top label", levelText = "level text", levelDescription = "level description", value = 0, maxStars = 5, className, ...props }, ref) => {
     return (
-      <div ref={ref} className={cn("p-6 bg-white rounded-lg shadow-sm space-y-4", className)} {...props}>
+      <div ref={ref} className={cn("p-6 bg-[#eee] rounded-lg shadow-sm space-y-4", className)} {...props}>
         {topLabel && (
           <div className="text-lg font-medium text-navy-900">{topLabel}</div>
         )}
