@@ -7,7 +7,7 @@ export interface CustomAlertProps extends React.HTMLAttributes<HTMLDivElement> {
   message: string;
 }
 
-const CustomAlert = React.forwardRef<HTMLDivElement, CustomAlertProps>(
+export const CustomAlert = React.forwardRef<HTMLDivElement, CustomAlertProps>(
   ({ variant = 'info', message, className, ...props }, ref) => {
     const variants = {
       success: {
@@ -48,5 +48,3 @@ const CustomAlert = React.forwardRef<HTMLDivElement, CustomAlertProps>(
 );
 
 CustomAlert.displayName = 'CustomAlert';
-
-export default CustomAlert;
